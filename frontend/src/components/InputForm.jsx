@@ -29,7 +29,7 @@ const handleWatsonParse = async () => {
   if (!naturalText) return;
   setWatsonLoading(true);
   try {
-    const res = await fetch("http://127.0.0.1:5000/watson-analyze", {
+    const res = await fetch("https://realroot-api.onrender.com/watson-analyze", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: naturalText }),
@@ -61,7 +61,7 @@ const handleAfford = async () => {
   setAffordLoading(true);
   setAffordResults(null);
   try {
-    const res = await fetch("http://127.0.0.1:5000/afford", {
+    const res = await fetch("https://realroot-api.onrender.com/afford", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ monthly_budget: parseFloat(budget) }),
