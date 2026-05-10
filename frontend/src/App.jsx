@@ -21,7 +21,7 @@ export default function App() {
 };
 
 
- const API = "http://127.0.0.1:5000";
+const API = "https://realroot-api.onrender.com";
 
 
  const handleAnalyze = async ({ income, neighbourhood }) => {
