@@ -17,13 +17,13 @@ export default function Dashboard({ results, onBack, onCompare }) {
 
  useEffect(() => {
    // Fetch StatCan data
-   fetch(`http://127.0.0.1:5000/statcan/${results.neighbourhood}`)
+   fetch(`https://realroot-api.onrender.com/statcan/${results.neighbourhood}`)
      .then((res) => res.json())
      .then((data) => setStatcan(data))
      .catch((err) => console.error("StatCan fetch error:", err));
 
    // Fetch Toronto Open Data
-   fetch(`http://127.0.0.1:5000/toronto-data/${results.neighbourhood}`)
+   fetch(`https://realroot-api.onrender.com/toronto-data/${results.neighbourhood}`)
      .then((res) => res.json())
      .then((data) => setTorontoData(data))
      .catch((err) => console.error("Toronto data fetch error:", err));
